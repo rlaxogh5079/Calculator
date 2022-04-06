@@ -13,7 +13,9 @@ const handleBtnClick = (event) => {
   } else if (event.target.value === "T") {
     result.innerText = Number(-resultValue).toLocaleString();
   } else if (event.target.value === "B") {
-    console.log("BackSpace");
+    result.innerText = parseInt(resultValue / 10).toLocaleString();
+    event.target.classList.toggle("clicked");
+    event.target.classList.toggle("unclicked");
   }
   if (event.target.value === "=") {
     console.log(preValue, resultValue);
